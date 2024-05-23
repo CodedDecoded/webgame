@@ -13,7 +13,7 @@
 }
 
 strong {
-  font-family: "DellR-Bold";
+  font-family: "Roboto-Bold";
 }
 
 body, html {
@@ -121,7 +121,7 @@ body {
 .timer {
   font-size: 24px;
   color: #6ea204;
-  font-family: "DellR-Light";
+  font-family: "Roboto-Light";
   float: right;
   text-align: right;
 }
@@ -151,7 +151,7 @@ body {
 }
 
 .container-specified h2 {
-  font-family: "DellR-Bold";
+  font-family: "Roboto-Bold";
   color: #6ea204;
   font-size: 40px;
   position: absolute;
@@ -164,7 +164,7 @@ body {
 
 .btn-blue {
   text-transform: uppercase;
-  font-family: "DellR-Light";
+  font-family: "Roboto-Light";
   color: #ffffff;
   background: #6ea204;
   font-size: 24px;
@@ -283,7 +283,7 @@ body {
 }
 
 .modal-content h3 {
-  font-family: "DellR-Bold";
+  font-family: "Roboto-Bold";
   font-size: 50px;
   color: #6ea204;
   margin: 0 0 20px 0;
@@ -303,7 +303,7 @@ body {
 }
 
 .modal-content h4 {
-  font-family: "DellR-Bold";
+  font-family: "Roboto-Bold";
   color: #000000;
   text-transform: uppercase;
   font-size: 80px;
@@ -312,7 +312,7 @@ body {
 
 .modal-content p.result {
   font-size: 55px;
-  font-family: "DellR-Bold";
+  font-family: "Roboto-Bold";
   margin: 0;
   color: #6ea204;
 }
@@ -341,7 +341,7 @@ span#tiktok:before {
 
 p {
   font-size: 24px;
-  font-family: "DellR-Light";
+  font-family: "Roboto-Light";
   margin: 10px 0;
 }
 
@@ -401,7 +401,7 @@ div#myModal3 .modal-content {
 }
 
 .steps-area li {
-  font-family: "DellR-Light";
+  font-family: "Roboto-Light";
   font-size: 24px;
   color: #242424;
   margin-bottom: 15px;
@@ -438,7 +438,7 @@ p.tc {
 
 .steps-to-play h5 {
   font-size: 45px;
-  font-family: "DellR-Light";
+  font-family: "Roboto-Light";
   text-transform: uppercase;
   margin: 0;
   color: #6ea204;
@@ -460,7 +460,7 @@ p.tc {
 .steps-to-play .winners-job {
   font-size: 18px;
   color: #6ea204;
-  font-family: "DellR-Bold";
+  font-family: "Roboto-Bold";
   text-align: left;
   padding-left: 30px;
 }
