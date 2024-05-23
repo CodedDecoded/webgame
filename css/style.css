@@ -1,0 +1,712 @@
+@font-face {
+  font-family: 'DellR-Light';
+  src: url("../fonts/DellReplica-Light.eot") format("embedded-opentype"), url("../fonts/DellReplica-Light.woff") format("woff"), url("../fonts/DellReplica-Light.ttf") format("truetype"), url("../fonts/DellReplica-Light.svg#Roboto-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DellR-Bold';
+  src: url("../fonts/DellReplica-Bold.eot") format("embedded-opentype"), url("../fonts/DellReplica-Bold.woff") format("woff"), url("../fonts/DellReplica-Bold.ttf") format("truetype"), url("../fonts/DellReplica-Bold.svg#Roboto-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+strong {
+  font-family: "DellR-Bold";
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: mintcream;
+}
+
+body {
+  background: url(../images/bagitallground.jpg) no-repeat;
+  background-size: cover;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.centric-elem {
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  position: relative;
+  animation: spin 2s linear infinite reverse;
+}
+
+.pad0 {
+  padding: 0;
+}
+
+.centric-elem li {
+  list-style: none;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.items {
+  position: absolute;
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+
+@-webkit-keyframes antispin {
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@keyframes antispin {
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+.nav {
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.nav > div {
+  display: inline-block;
+}
+
+.dell-logo, .timer {
+  width: 49%;
+}
+
+.timer {
+  font-size: 24px;
+  color: #6ea204;
+  font-family: "DellR-Light";
+  float: right;
+  text-align: right;
+}
+
+.dell-logo img {
+  padding: 30px 16%;
+}
+
+.container-specified {
+  width: 85%;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  -webkit-box-shadow: 1px 2px 8px #444444;
+          box-shadow: 1px 2px 8px #444444;
+  height: 80%;
+  position: relative;
+}
+
+.container-specified h2 {
+  font-family: "DellR-Bold";
+  color: #6ea204;
+  font-size: 40px;
+  position: absolute;
+  top: 0;
+}
+
+#dropzone{
+  position:absolute;
+}
+
+.btn-blue {
+  text-transform: uppercase;
+  font-family: "DellR-Light";
+  color: #ffffff;
+  background: #6ea204;
+  font-size: 24px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 50px;
+  cursor: pointer;
+  line-height: 24px;
+  outline: none;
+}
+
+.btn-blue:hover, .btn-blue:focus {
+  background: #6ea204;
+}
+
+.container-specified button {
+  position: absolute;
+  bottom: 50px;
+}
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #f8f8f8;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  text-align: center;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-wrapper, .container-wrapper {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+.modal {
+  background: none;
+}
+
+.modal-content {
+  width: 83%;
+  height: 76%;
+  border-radius: 20px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  border: none;
+  -webkit-box-shadow: 1px 2px 8px #444444;
+          box-shadow: 1px 2px 8px #444444;
+}
+
+.modal-content h3 {
+  font-family: "DellR-Bold";
+  font-size: 50px;
+  color: #6ea204;
+  margin: 0 0 20px 0;
+  position: relative;
+}
+
+.modal-content h3:after {
+  height: 5px;
+  content: "";
+  width: 75%;
+  background: #6ea204;
+  position: absolute;
+  bottom: -2px;
+  left: 40px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.modal-content h4 {
+  font-family: "DellR-Bold";
+  color: #000000;
+  text-transform: uppercase;
+  font-size: 80px;
+  margin: 20px 0 0 0;
+}
+
+.modal-content p.result {
+  font-size: 55px;
+  font-family: "DellR-Bold";
+  margin: 0;
+  color: #6ea204;
+}
+
+.modal-content .or {
+  font-weight: bold;
+}
+
+.modal-content span.close {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  font-size: 3vw;
+}
+
+span#tiktok:before {
+  content: " ";
+  background: url(../images/timer.png) center center no-repeat;
+  padding: 20px;
+  vertical-align: text-bottom;
+}
+
+.timer .timer-inside {
+  padding: 23px 16%;
+}
+
+p {
+  font-size: 24px;
+  font-family: "DellR-Light";
+  margin: 10px 0;
+}
+
+#myModal p.result {
+  padding: 100px 0;
+}
+
+.ssandsave {
+  text-transform: uppercase;
+}
+
+.ssandsave p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  vertical-align: middle;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ssandsave p span {
+  padding-right: 10px;
+}
+
+.bagwati {
+  width: 110px;
+  height: auto;
+}
+
+.steps-area {
+  width: 70%;
+}
+
+div#myModal3 .modal-content {
+  background: url(../images/gamerfied.png) right no-repeat, #ffffff;
+  background-size: contain;
+}
+
+.steps-image {
+  width: 30%;
+  position: relative;
+}
+
+.steps-image .product-bag {
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+
+.steps-corner > div {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.steps-area li {
+  font-family: "DellR-Light";
+  font-size: 24px;
+  color: #242424;
+  margin-bottom: 15px;
+  list-style: none;
+}
+
+.steps-area li:before {
+  content: " ";
+  padding: 13px 15px;
+  background: url(../images/list.png) center center no-repeat;
+  position: absolute;
+  margin-left: -32px;
+}
+
+.steps-corner {
+  padding: 40px 0;
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+p.tc {
+  position: absolute;
+  right: 1.5vw;
+  bottom: 1vw;
+  color: #000000;
+}
+
+.steps-to-play h5 {
+  font-size: 45px;
+  font-family: "DellR-Light";
+  text-transform: uppercase;
+  margin: 0;
+  color: #6ea204;
+  position: relative;
+}
+
+.steps-to-play h5:after {
+  height: 5px;
+  content: "";
+  width: 10%;
+  background: #6ea204;
+  position: absolute;
+  bottom: -2px;
+  left: 45%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.steps-to-play .winners-job {
+  font-size: 18px;
+  color: #6ea204;
+  font-family: "DellR-Bold";
+  text-align: left;
+  padding-left: 30px;
+}
+
+.steps-area ul {
+  text-align: left;
+}
+
+.pink-slap {
+  width: 110px;
+}
+
+.steps-to-play {
+  width: 100%;
+}
+
+.timer-inside {
+  opacity: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+@media all and (-ms-high-contrast: none) {
+  .modal-content {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+  /* IE10 */
+  .container-specified h2, .container-specified button {
+    left: 44%;
+  }
+}
+
+@media (max-width: 1445px) {
+  .steps-area li {
+    font-size: 20px;
+  }
+  .steps-to-play h5 {
+    font-size: 35px;
+  }
+  .steps-corner {
+    padding: 20px 0;
+  }
+  .modal-content h3 {
+    font-size: 40px;
+  }
+  .modal-content h4 {
+    font-size: 65px;
+  }
+  .modal-content p.result {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .steps-to-play h5 {
+    font-size: 30px;
+  }
+  .steps-to-play h5:after {
+    height: 2px;
+  }
+  .steps-area li {
+    font-size: 20px;
+  }
+  #myModal3 .modal-content {
+    padding: 15px;
+    width: 90%;
+    overflow-y: scroll;
+    display: block;
+  }
+  .steps-area {
+    width: 100%;
+  }
+  .hidden {
+    display: block;
+  }
+  div#myModal3 .modal-content {
+    background: #ffffff;
+    background-size: contain;
+    padding: 15px 0 0 0;
+  }
+  .steps-area ul {
+    padding-right: 25px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .steps-corner > div {
+    display: block;
+  }
+  .steps-area, .steps-image {
+    width: 100%;
+  }
+  .steps-corner {
+    display: block;
+  }
+  .steps-image .product-bag {
+    position: relative;
+  }
+}
+
+@media (max-width: 768px) {
+  .steps-area li:before {
+    background-size: 60%;
+  }
+  .steps-area li {
+    width: 100%;
+  }
+  .steps-image {
+    width: 150px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 768px) and (max-height: 700px) {
+  .steps-area li {
+    font-size: 17px;
+  }
+  .steps-area li:before {
+    padding: 8px 15px;
+    background-size: 55%;
+  }
+  .container-specified h2 {
+    margin: 10px 0 0 0;
+  }
+  .container-specified button {
+    bottom: 15px;
+  }
+  .item-img {
+    width: 70%;
+  }
+  .modal-content h4 {
+    font-size: 50px;
+  }
+  .modal-content p.result {
+    font-size: 36px;
+  }
+  .bagwati {
+    width: 70px;
+  }
+  .btn-blue {
+    font-size: 20px;
+    padding: 7px 30px;
+    line-height: 20px;
+  }
+  .steps-to-play h5 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) and (max-width: 550px) {
+  .steps-area li {
+    font-size: 14px;
+  }
+  .steps-to-play h5 {
+    font-size: 24px;
+  }
+  p {
+    font-size: 14px;
+  }
+  .btn-blue {
+    font-size: 16px;
+    padding: 8px 20px;
+  }
+  #myModal3 .modal-content {
+    padding: 8px;
+    width: 90%;
+  }
+  #myModal3 .modal-content {
+    padding: 8px;
+    width: 90%;
+    overflow-y: scroll;
+    /* position: relative; */
+    display: block;
+  }
+  .steps-to-play {
+    position: relative;
+    padding: 5px 0 40px 0;
+  }
+  .dell-logo img {
+    padding: 20px 16%;
+    width: 140px;
+    margin-top: 3px;
+  }
+  .timer {
+    font-size: 18px;
+  }
+  .timer .timer-inside {
+    padding: 20px 16%;
+  }
+  .modal-content h3 {
+    font-size: 30px;
+  }
+  #myModal p.result {
+    padding: 60px 0;
+  }
+  .modal-content h3:after {
+    width: 41%;
+    bottom: -5px;
+  }
+  .modal-content p.result {
+    font-size: 35px;
+  }
+  .modal-content span.close {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 30px;
+  }
+  .modal-content h4 {
+    font-size: 20px;
+  }
+  .modal-content p.result {
+    font-size: 20px;
+  }
+  #myModal2 .modal-content h3 {
+    font-size: 24px;
+  }
+  p.or {
+    font-size: 12px;
+    margin: 10px 0 0 0;
+  }
+  .bagwati {
+    width: 80px;
+  }
+  .ssandsave p span {
+    padding-right: 0px;
+  }
+  .tweettweet {
+    width: 80%;
+  }
+  .centric-elem {
+    width: 100px;
+    height: 100px;
+  }
+  .container-specified {
+    width: 95%;
+  }
+  .item-img {
+    width: 50px;
+  }
+  .pink-slap {
+    width: 70px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
